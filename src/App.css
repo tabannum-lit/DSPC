@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Corporate Navigation Styles */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+  
+  .mobile-menu-btn {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: none !important;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+/* Navigation Link Active State */
+.nav-link.active {
+  color: #c0c0c0 !important;
+  background-color: rgba(200, 200, 200, 0.1) !important;
 }
 
-@keyframes App-logo-spin {
+/* Smooth transitions for mobile menu */
+.mobile-nav {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.mobile-nav.open {
+  max-height: 400px;
+}
+
+/* Enhanced hover effects */
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Professional styling for business theme */
+nav {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Corporate accent animations */
+@keyframes silverGlow {
+  0% { box-shadow: 0 0 5px rgba(200, 200, 200, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(200, 200, 200, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(200, 200, 200, 0.3); }
+}
+
+.nav-link.active {
+  animation: silverGlow 2s ease-in-out infinite;
+}
+
+/* Mobile menu button styling */
+.mobile-menu-btn {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.mobile-menu-btn:hover {
+  background-color: rgba(200, 200, 200, 0.1) !important;
+  color: #c0c0c0 !important;
+}
+
+/* Search input styling */
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hero Section Animations */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax background effect */
+@media (max-width: 768px) {
+  #home {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Responsive company name */
+@media (max-width: 480px) {
+  .company-name {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Adjust hero text for mobile */
+  #home h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  #home p {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .company-name {
+    font-size: 1rem !important;
+  }
+  
+  #home h1 {
+    font-size: 2rem !important;
+  }
+  
+  #home p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Clean Product Page Responsive Styles */
+@media (max-width: 768px) {
+  #products .product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  #products .product-card {
+    padding: 1.5rem !important;
+  }
+  
+  #products .product-card .product-layout {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  #products .product-image {
+    width: 100% !important;
+    height: 180px !important;
+    align-self: center !important;
+  }
+  
+  #products .quote-section {
+    padding: 2rem 1rem !important;
+  }
+  
+  #products .quote-form {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  #products .quote-form select {
+    min-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #products h2 {
+    font-size: 2rem !important;
+  }
+  
+  #products .product-name {
+    font-size: 1.1rem !important;
+  }
+  
+  #products .product-details {
+    font-size: 0.85rem !important;
+  }
+  
+  #products .product-description {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Product card hover effects */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(44, 62, 80, 0.15) !important;
+}
+
+/* Product image hover effects */
+.product-image-placeholder {
+  transition: all 0.3s ease;
+}
+
+.product-image-placeholder:hover {
+  transform: scale(1.05) !important;
+  border-color: #2c3e50 !important;
+}
+
+/* CTA button animations */
+.product-cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.product-cta-button:hover::before {
+  left: 100%;
 }
