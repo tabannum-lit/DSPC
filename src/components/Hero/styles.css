@@ -1,0 +1,6 @@
+.ds-hero { position: relative; background-image: linear-gradient(rgba(44,62,80,0.7), rgba(52,73,94,0.7)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position:center; background-attachment: fixed; color:white; padding:8rem 2rem 4rem; text-align:center; min-height:100vh; display:flex; align-items:center; justify-content:center; }
+.ds-hero-inner { max-width:900px; }
+.ds-hero-title { font-size:4rem; font-weight:900; margin-bottom:1.5rem; line-height:1.1; text-shadow:2px 2px 8px rgba(0,0,0,0.5); letter-spacing:-1px; font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif; }
+.ds-hero-sub { font-size:1.5rem; margin-bottom:3rem; opacity:.95; font-weight:300; line-height:1.4; }
+.ds-hero-cta { background:#c0c0c0; color:#2c3e50; border:none; padding:1.2rem 3rem; font-size:1.2rem; font-weight:700; border-radius:50px; cursor:pointer; box-shadow:0 8px 25px rgba(192,192,192,.3); text-transform:uppercase; }
+.ds-hero-cta:hover { background:white; transform:translateY(-3px); box-shadow:0 12px 35px rgba(192,192,192,.4); }

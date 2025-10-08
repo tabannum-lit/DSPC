@@ -1,84 +1,84 @@
-/* Corporate Navigation Styles */
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none !important;
-  }
-  
-  .mobile-menu-btn {
-    display: block !important;
-  }
+/* Global App Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 769px) {
-  .desktop-nav {
-    display: flex !important;
-  }
-  
-  .mobile-menu-btn {
-    display: none !important;
-  }
-  
-  .mobile-nav {
-    display: none !important;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-/* Navigation Link Active State */
-.nav-link.active {
-  color: #c0c0c0 !important;
-  background-color: rgba(200, 200, 200, 0.1) !important;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth transitions for mobile menu */
-.mobile-nav {
-  transition: all 0.3s ease-in-out;
-  max-height: 0;
-  overflow: hidden;
+/* App Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.mobile-nav.open {
-  max-height: 400px;
+main {
+  flex: 1;
 }
 
-/* Enhanced hover effects */
-.nav-link:hover {
-  transform: translateY(-1px);
+/* Global Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-/* Professional styling for business theme */
-nav {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+p {
+  margin: 0;
 }
 
-/* Corporate accent animations */
-@keyframes silverGlow {
-  0% { box-shadow: 0 0 5px rgba(200, 200, 200, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(200, 200, 200, 0.6); }
-  100% { box-shadow: 0 0 5px rgba(200, 200, 200, 0.3); }
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
-.nav-link.active {
-  animation: silverGlow 2s ease-in-out infinite;
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
-/* Mobile menu button styling */
-.mobile-menu-btn {
-  transition: all 0.3s ease;
+a {
+  text-decoration: none;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
   border-radius: 4px;
 }
 
-.mobile-menu-btn:hover {
-  background-color: rgba(200, 200, 200, 0.1) !important;
-  color: #c0c0c0 !important;
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
 }
 
-/* Search input styling */
-input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Hero Section Animations */
+/* Global Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -101,139 +101,59 @@ input[type="text"]::placeholder {
   }
 }
 
-/* Parallax background effect */
-@media (max-width: 768px) {
-  #home {
-    background-attachment: scroll !important;
-  }
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-/* Responsive company name */
-@media (max-width: 480px) {
-  .company-name {
-    font-size: 1.1rem !important;
-  }
-  
-  /* Adjust hero text for mobile */
-  #home h1 {
-    font-size: 2.5rem !important;
-  }
-  
-  #home p {
-    font-size: 1.2rem !important;
-  }
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-@media (max-width: 320px) {
-  .company-name {
-    font-size: 1rem !important;
-  }
-  
-  #home h1 {
-    font-size: 2rem !important;
-  }
-  
-  #home p {
-    font-size: 1rem !important;
-  }
+.section {
+  padding: 4rem 2rem;
 }
 
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
+.text-center {
+  text-align: center;
 }
 
-/* Clean Product Page Responsive Styles */
-@media (max-width: 768px) {
-  #products .product-grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-  
-  #products .product-card {
-    padding: 1.5rem !important;
-  }
-  
-  #products .product-card .product-layout {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-  
-  #products .product-image {
-    width: 100% !important;
-    height: 180px !important;
-    align-self: center !important;
-  }
-  
-  #products .quote-section {
-    padding: 2rem 1rem !important;
-  }
-  
-  #products .quote-form {
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
-  
-  #products .quote-form select {
-    min-width: 100% !important;
-  }
-}
-
-@media (max-width: 480px) {
-  #products h2 {
-    font-size: 2rem !important;
-  }
-  
-  #products .product-name {
-    font-size: 1.1rem !important;
-  }
-  
-  #products .product-details {
-    font-size: 0.85rem !important;
-  }
-  
-  #products .product-description {
-    font-size: 0.9rem !important;
-  }
-}
-
-/* Product card hover effects */
-.product-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.product-card:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 20px 40px rgba(44, 62, 80, 0.15) !important;
-}
-
-/* Product image hover effects */
-.product-image-placeholder {
-  transition: all 0.3s ease;
-}
-
-.product-image-placeholder:hover {
-  transform: scale(1.05) !important;
-  border-color: #2c3e50 !important;
-}
-
-/* CTA button animations */
-.product-cta-button {
-  position: relative;
-  overflow: hidden;
-}
-
-.product-cta-button::before {
-  content: '';
+.sr-only {
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.product-cta-button:hover::before {
-  left: 100%;
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .section {
+    padding: 2rem 0.5rem;
+  }
 }
