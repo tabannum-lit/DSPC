@@ -65,6 +65,20 @@
   box-shadow: 0 12px 35px rgba(192, 192, 192, 0.4);
 }
 
+.hero-slideshow {
+  transition: background-image 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fade-slide.fade-in {
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fade-slide.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
