@@ -1,0 +1,12 @@
+.ds-footer { background:#2c3e50; color:white; padding:3rem 2rem 2rem; margin-top:4rem; }
+.ds-footer-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-bottom:2rem; }
+.ds-footer-brand { display:flex; align-items:center; gap:1rem; }
+.ds-footer-brand img { height:40px; }
+.ds-footer .ds-tag { color:#c0c0c0; font-weight:600; font-size:1.1rem; margin-bottom:.5rem; }
+.quick-links a { display:block; color:#c0c0c0; text-decoration:none; margin-bottom:.5rem; }
+.socials { font-size:1.5rem; margin-bottom:1rem; }
+.newsletter-form { display:flex; gap:.5rem; }
+.newsletter-form input { flex:1; padding:.5rem; border:1px solid #555; border-radius:4px; }
+.newsletter-form button { padding:.5rem 1rem; background:#c0c0c0; color:#2c3e50; border:none; border-radius:4px; }
+.ds-legal { border-top:1px solid #555; padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+.legal-links a { color:#c0c0c0; text-decoration:none; margin-right:1rem; }

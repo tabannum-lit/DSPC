@@ -1,0 +1,169 @@
+/* Mission, Vision & Values Section Styles */
+.mission-vision-values {
+  padding: 4rem 2rem;
+  background-color: #2c3e50;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-container {
+  width: 100%;
+}
+
+.mission-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mission-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mission-subtitle {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.mission-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.mission-vision-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.mission-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #c0c0c0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-description {
+  color: white;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.values-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  grid-column: span 2;
+}
+
+.values-title {
+  color: #c0c0c0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.value-item {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.value-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.value-title {
+  color: #c0c0c0;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.value-description {
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision-values {
+    padding: 3rem 1rem;
+  }
+
+  .mission-title {
+    font-size: 2rem;
+  }
+
+  .mission-subtitle {
+    font-size: 1rem;
+  }
+
+  .mission-vision-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .values-card {
+    grid-column: span 1;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .value-item {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision-values {
+    padding: 2rem 0.5rem;
+  }
+
+  .mission-card {
+    padding: 1.5rem;
+  }
+
+  .values-card {
+    padding: 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
