@@ -8,6 +8,7 @@ import Products from "./components/Products";
 import Industries from "./components/Industries";
 import Quality from "./components/Quality";
 import Clients from "./components/Clients";
+import IndustriesClients from "./components/IndustriesClients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -54,9 +55,7 @@ function App() {
                   <Hero scrollToSection={scrollToSection} />
                   <About />
                   <MissionVisionValues />
-                  <Industries />
                   <Quality />
-                  <Clients />
                   <Contact />
                 </main>
 
@@ -66,6 +65,7 @@ function App() {
           />
 
           <Route path="/products" element={<Products />} />
+          <Route path="/industries-clients" element={<IndustriesClients />} />
         </Routes>
       </div>
     </Router>

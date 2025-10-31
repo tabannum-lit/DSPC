@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../Images/logo.png";
 import "./Footer.css";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaBriefcase, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -29,17 +30,17 @@ const Footer = () => {
             <h4 className="footer-title">Contact Information</h4>
             <div className="footer-contact">
               <div className="contact-item">
-                <span className="contact-icon">📍</span>
+                <span className="contact-icon"><FaMapMarkerAlt /></span>
                 <span className="contact-text">
                   207/3 Mirhazirbag, Dhaka - 1204, Bangladesh
                 </span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📞</span>
+                <span className="contact-icon"><FaPhone /></span>
                 <span className="contact-text">+880 1712236938</span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📧</span>
+                <span className="contact-icon"><FaEnvelope /></span>
                 <span className="contact-text">
                   zamirahmed@dotshoulderpad.com
                 </span>
@@ -66,13 +67,13 @@ const Footer = () => {
             <h4 className="footer-title">Connect With Us</h4>
             <div className="footer-social">
               <a href="#" className="social-link" title="LinkedIn">
-                💼
+                <FaBriefcase />
               </a>
               <a href="#" className="social-link" title="Instagram">
-                📷
+                <FaInstagram />
               </a>
               <a href="#" className="social-link" title="Facebook">
-                📘
+                <FaFacebook />
               </a>
             </div>
 

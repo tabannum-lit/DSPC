@@ -1,30 +1,31 @@
 import React from "react";
 import "./Industries.css";
+import { FaSuitcase , FaTshirt, FaShirtsinbulk, FaLeaf } from "react-icons/fa";
 
 const products = [
   {
     name: "Jacket & Coat Shoulder Pads",
-    icon: "👔",
+    icon: <FaSuitcase />,
     description: "Designed for perfect structure and comfort in men’s and women’s outerwear",
   },
-  {
-    name: "Blazer & Suit Shoulder Pads",
-    icon: "🧥",
-    description: "Premium molded pads providing tailored shape and professional fit",
-  },
+  // {
+  //   name: "Blazer & Suit Shoulder Pads",
+  //   icon: <FaJacket />,
+  //   description: "Premium molded pads providing tailored shape and professional fit",
+  // },
   {
     name: "Uniform Shoulder Pads",
-    icon: "🎽",
+    icon: <FaShirtsinbulk />,
     description: "Durable and comfortable options for school, military, and hospitality uniforms",
   },
   {
     name: "Dress & Casualwear Shoulder Pads",
-    icon: "👚",
+    icon: <FaShirtsinbulk />,
     description: "Lightweight pads that enhance everyday fashion and comfort",
   },
   {
     name: "Custom & Eco-friendly Shoulder Pads",
-    icon: "🌿",
+    icon: <FaLeaf />,
     description: "Sustainably made from recycled fibers and tailored to client specifications",
   },
 ];

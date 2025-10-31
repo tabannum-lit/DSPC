@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../Images/logo.png';
 import './styles.css';
+import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 
 export default function NavBar({
   activeSection,
@@ -44,12 +45,12 @@ export default function NavBar({
               onChange={(e) => setSearchQuery(e.target.value)}
               className="search-input"
             />
-            <button type="submit" className="search-btn">🔍</button>
+            <button type="submit" className="search-btn"><FaSearch /></button>
           </form>
         </div>
 
         <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? '✕' : '☰'}
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 

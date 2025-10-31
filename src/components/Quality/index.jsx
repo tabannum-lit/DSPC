@@ -1,5 +1,6 @@
 import React from "react";
 import "./Quality.css";
+import { FaAward, FaLeaf, FaMicroscope } from "react-icons/fa";
 
 const Quality = () => {
   return (
@@ -14,7 +15,7 @@ const Quality = () => {
 
         <div className="quality-features">
           <div className="quality-feature">
-            <div className="feature-icon">🏆</div>
+            <div className="feature-icon"><FaAward /></div>
             <h3 className="feature-title">ISO 9001:2015 Certified</h3>
             <p className="feature-description">
               Internationally recognized quality management system ensuring
@@ -24,7 +25,7 @@ const Quality = () => {
           </div>
 
           <div className="quality-feature">
-            <div className="feature-icon">🌱</div>
+            <div className="feature-icon"><FaLeaf /></div>
             <h3 className="feature-title">Sustainable Manufacturing</h3>
             <p className="feature-description">
               Committed to environmental responsibility through sustainable
@@ -34,7 +35,7 @@ const Quality = () => {
           </div>
 
           <div className="quality-feature">
-            <div className="feature-icon">🔬</div>
+            <div className="feature-icon"><FaMicroscope /></div>
             <h3 className="feature-title">Quality Assurance</h3>
             <p className="feature-description">
               Rigorous testing protocols and continuous quality monitoring

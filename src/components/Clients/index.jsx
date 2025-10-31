@@ -1,5 +1,6 @@
 import React from "react";
 import "./Clients.css";
+import { FaAward, FaHandshake, FaGlobe } from "react-icons/fa";
 
 const Clients = () => {
   return (
@@ -15,7 +16,7 @@ const Clients = () => {
 
         <div className="clients-features">
           <div className="client-feature">
-            <div className="feature-icon">🏆</div>
+            <div className="feature-icon"><FaAward /></div>
             <h3 className="feature-title">Quality Excellence</h3>
             <p className="feature-description">
               ISO certified manufacturing processes ensure every shoulder pad
@@ -24,7 +25,7 @@ const Clients = () => {
           </div>
 
           <div className="client-feature">
-            <div className="feature-icon">🤝</div>
+            <div className="feature-icon"><FaHandshake /></div>
             <h3 className="feature-title">Trusted Partnerships</h3>
             <p className="feature-description">
               Serving clients worldwide with reliable supply chains and
@@ -33,7 +34,7 @@ const Clients = () => {
           </div>
 
           <div className="client-feature">
-            <div className="feature-icon">🌍</div>
+            <div className="feature-icon"><FaGlobe /></div>
             <h3 className="feature-title">Global Reach</h3>
             <p className="feature-description">
               From local businesses to international corporations, we deliver

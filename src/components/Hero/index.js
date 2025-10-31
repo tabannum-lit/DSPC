@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
+import Factory4 from '../../Images/Raw/Factory-4.jpeg';
+import Factory8 from '../../Images/Raw/Factory-8.jpeg';
+import Factory14 from '../../Images/Raw/Factory-14.jpeg';
+import Factory13 from '../../Images/Raw/Factory-13.jpeg';
+import Factory10 from '../../Images/Raw/Factory-10.jpeg';
 
 export default function Hero({ scrollToSection }) {
-  // Array of 5 slideshow images (replace these URLs with your chosen images)
+  // Array of 5 slideshow images using local images
   const images = [
-    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80", // Factory 1
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2070&q=80", // Factory 2
-    "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=2070&q=80", // Factory 3
-    "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=2070&q=80", // Production
-    "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=2070&q=80"  // Workers
+    Factory4,
+    Factory8,
+    Factory14,
+    Factory13,
+    Factory10
   ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);

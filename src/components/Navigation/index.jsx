@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../../Images/logo.png";
 import "./Navigation.css";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 
 const Navigation = ({
   activeSection = "home",
@@ -23,16 +24,21 @@ const Navigation = ({
     }
   };
 
-  // Determine if we're on products page
+  // Determine if we're on products page or industries-clients page
   const isProductsPage = location.pathname === "/products";
+  const isIndustriesClientsPage = location.pathname === "/industries-clients";
 
   const handleNavClick = (section) => {
     if (section === "products") {
       // Navigate to products page instead of scrolling
       window.location.href = "/products";
       setIsMobileMenuOpen(false);
-    } else if (isProductsPage) {
-      // On products page, navigate to home page and scroll to section
+    } else if ( section === "clients") {
+      // Navigate to industries-clients page
+      window.location.href = "/industries-clients";
+      setIsMobileMenuOpen(false);
+    } else if (isProductsPage || isIndustriesClientsPage) {
+      // On products or industries-clients page, navigate to home page and scroll to section
       window.location.href = `/#${section}`;
       setIsMobileMenuOpen(false);
     } else {
@@ -66,7 +72,7 @@ const Navigation = ({
               "home",
               "about",
               "products",
-              "industries",
+              
               "clients",
               "contact",
             ].map((section) => (
@@ -74,15 +80,17 @@ const Navigation = ({
                 key={section}
                 onClick={() => handleNavClick(section)}
                 className={`nav-link ${
-                  (activeSection === section && !isProductsPage) ||
-                  (section === "products" && isProductsPage)
+                  (activeSection === section && !isProductsPage && !isIndustriesClientsPage) ||
+                  (section === "products" && isProductsPage) ||
+                  (( section === "clients") && isIndustriesClientsPage)
                     ? "active"
                     : ""
                 }`}
               >
                 {section}
-                {(activeSection === section && !isProductsPage) ||
-                (section === "products" && isProductsPage) ? (
+                {(activeSection === section && !isProductsPage && !isIndustriesClientsPage) ||
+                (section === "products" && isProductsPage) ||
+                (( section === "clients") && isIndustriesClientsPage) ? (
                   <div className="active-indicator" />
                 ) : null}
               </button>
@@ -99,14 +107,14 @@ const Navigation = ({
               className="search-input"
             />
             <button type="submit" className="search-btn">
-              🔍
+              <FaSearch />
             </button>
           </form>
         </div>
 
         {/* Mobile Menu Button */}
         <button onClick={toggleMobileMenu} className="mobile-menu-btn">
-          {isMobileMenuOpen ? "✕" : "☰"}
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
@@ -135,8 +143,9 @@ const Navigation = ({
               key={section}
               onClick={() => handleNavClick(section)}
               className={`mobile-nav-link ${
-                (activeSection === section && !isProductsPage) ||
-                (section === "products" && isProductsPage)
+                (activeSection === section && !isProductsPage && !isIndustriesClientsPage) ||
+                (section === "products" && isProductsPage) ||
+                ((section === "clients") && isIndustriesClientsPage)
                   ? "active"
                   : ""
               }`}

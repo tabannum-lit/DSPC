@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../Navigation";
 import Footer from "../Footer";
 import "./Products.css";
+import { FaTag, FaBolt, FaTruck, FaIndustry } from "react-icons/fa";
 
 const Products = () => {
   const products = [
@@ -128,7 +129,7 @@ const Products = () => {
                   <div className="product-content">
                     {/* Product Image Placeholder */}
                     <div className="product-image">
-                      <div className="product-icon">🏷️</div>
+                      <div className="product-icon"><FaTag /></div>
                     </div>
 
                     {/* Product Details */}
@@ -177,21 +178,21 @@ const Products = () => {
 
                 <div className="quote-benefits">
                   <div className="quote-benefit">
-                    <span className="benefit-icon">⚡</span>
+                    <span className="benefit-icon"><FaBolt /></span>
                     <div className="benefit-text">
                       <strong>24-Hour Response</strong>
                       <p>Get quotes within 24 hours</p>
                     </div>
                   </div>
                   <div className="quote-benefit">
-                    <span className="benefit-icon">🚚</span>
+                    <span className="benefit-icon"><FaTruck /></span>
                     <div className="benefit-text">
                       <strong>Global Shipping</strong>
                       <p>Worldwide delivery available</p>
                     </div>
                   </div>
                   <div className="quote-benefit">
-                    <span className="benefit-icon">🏭</span>
+                    <span className="benefit-icon"><FaIndustry /></span>
                     <div className="benefit-text">
                       <strong>Bulk Discounts</strong>
                       <p>Competitive pricing for large orders</p>

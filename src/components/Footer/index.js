@@ -31,8 +31,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4>Connect With Us</h4>
-          <div className="socials">💼 📷 📘</div>
+          
           <div className="newsletter">
             <h5>Subscribe for updates on new products</h5>
             <div className="newsletter-form">

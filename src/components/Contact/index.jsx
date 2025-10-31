@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.css";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 
 const Contact = () => {
   const handleContactSubmit = (e) => {
@@ -46,7 +47,7 @@ const Contact = () => {
             <div className="contact-info-card">
               <h3 className="info-title">Get in Touch</h3>
               <div className="info-item">
-                <strong className="info-label">📍 Address:</strong>
+                <strong className="info-label"><FaMapMarkerAlt /> Address:</strong>
                 <p className="info-text">
                   207/3 Mirhazirbag
                   <br />
@@ -56,15 +57,15 @@ const Contact = () => {
                 </p>
               </div>
               <div className="info-item">
-                <strong className="info-label">📞 Phone:</strong>
+                <strong className="info-label"><FaPhone /> Phone:</strong>
                 <p className="info-text">+880 1712236938 (Bangladesh)</p>
               </div>
               <div className="info-item">
-                <strong className="info-label">📧 Email:</strong>
+                <strong className="info-label"><FaEnvelope /> Email:</strong>
                 <p className="info-text">zamirahmed@dotshoulderpad.com</p>
               </div>
               <div className="info-item">
-                <strong className="info-label">🕒 Business Hours:</strong>
+                <strong className="info-label"><FaClock /> Business Hours:</strong>
                 <p className="info-text">
                   Monday - Friday: 8:00 AM - 6:00 PM
                   <br />
