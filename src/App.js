@@ -5,9 +5,9 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import MissionVisionValues from "./components/MissionVisionValues";
 import Products from "./components/Products";
-import Industries from "./components/Industries";
+
 import Quality from "./components/Quality";
-import Clients from "./components/Clients";
+
 import IndustriesClients from "./components/IndustriesClients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";

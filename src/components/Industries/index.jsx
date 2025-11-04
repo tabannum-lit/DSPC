@@ -1,6 +1,6 @@
 import React from "react";
 import "./Industries.css";
-import { FaSuitcase , FaTshirt, FaShirtsinbulk, FaLeaf } from "react-icons/fa";
+import { FaSuitcase , FaShirtsinbulk, FaLeaf } from "react-icons/fa";
 
 const products = [
   {
