@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import Factory4 from '../../Images/Raw/Factory-4.jpeg';
-import Factory8 from '../../Images/Raw/Factory-8.jpeg';
-import Factory14 from '../../Images/Raw/Factory-14.jpeg';
-import Factory13 from '../../Images/Raw/Factory-13.jpeg';
-import Factory10 from '../../Images/Raw/Factory-10.jpeg';
+import photoCollage2 from '../../animation picture/photo-collage2.png.png';
+import photoCollage from '../../animation picture/photo-collage.png.png';
+import factory1 from '../../animation picture/factory1.jpeg';
+import picture22 from '../../animation picture/Picture22.jpg';
+import picture11 from '../../animation picture/Picture11.jpg';
 
 export default function Hero({ scrollToSection }) {
   // Array of 5 slideshow images using local images
   const images = [
-    Factory4,
-    Factory8,
-    Factory14,
-    Factory13,
-    Factory10
+    photoCollage2,
+    photoCollage,
+    factory1,
+    picture22,
+    picture11
   ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);

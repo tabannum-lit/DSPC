@@ -3,7 +3,18 @@ import { Link } from "react-router-dom";
 import Navigation from "../Navigation";
 import Footer from "../Footer";
 import "./Products.css";
-import { FaTag, FaBolt, FaTruck, FaIndustry } from "react-icons/fa";
+import {  FaBolt, FaTruck, FaIndustry } from "react-icons/fa";
+// Import product images
+import overcoatsJacketImg from '../../product image/overcoats and jacket.jpg';
+import fourLayerImg from '../../product image/4 layer.jpg';
+import foamCoveredImg from '../../product image/foam covered with fabr.jpeg';
+import heavyOvercoatsImg from '../../product image/Heavy overcoats.jpg';
+import threePlyImg from '../../product image/3 ply.png';
+import foamShoulderpadImg from '../../product image/foam shoulderpad.jpeg';
+import diffStyleImg from '../../product image/diff style lightweight.jpg';
+import tricotImg from '../../product image/tricot.jpeg';
+import nonWovenImg from '../../product image/non-woven.jpeg';
+import sleeveRollImg from '../../product image/sleeveroll.jpg';
 
 const Products = () => {
   const products = [
@@ -14,6 +25,7 @@ const Products = () => {
       model: "SP01-0050",
       material: "100% Polyester Needle Punch",
       colors: "White / Black / Grey",
+      image: overcoatsJacketImg,
     },
     {
       name: "4-Layer Shoulder Pad for Jackets",
@@ -22,6 +34,7 @@ const Products = () => {
       model: "SP01-0051",
       material: "100% Polyester Needle Punch",
       colors: "White / Black / Grey",
+      image: fourLayerImg,
     },
     {
       name: "Foam Shoulder Pad Covered With Fabric",
@@ -30,6 +43,7 @@ const Products = () => {
       model: "SP-10",
       material: "100% Polyester Needle Punch & Fabric",
       colors: "White / Black / Grey",
+      image: foamCoveredImg,
     },
     {
       name: "Shoulder Pad for Heavy Overcoats",
@@ -38,6 +52,7 @@ const Products = () => {
       model: "SP-T11",
       material: "100% Polyester Needle Punch",
       colors: "White / Black / Grey",
+      image: heavyOvercoatsImg,
     },
     {
       name: "3-Ply Shoulder Pad",
@@ -46,6 +61,7 @@ const Products = () => {
       model: "SP-11",
       material: "100% Polyester Needle Punch",
       colors: "White / Black / Grey",
+      image: threePlyImg,
     },
     {
       name: "Foam Shoulder Pad",
@@ -54,6 +70,7 @@ const Products = () => {
       model: "SP-T12",
       material: "100% Polyester Needle Punch & Foam",
       colors: "White / Black / Grey",
+      image: foamShoulderpadImg,
     },
     {
       name: "Different Style Foam Shoulder Pad",
@@ -62,6 +79,7 @@ const Products = () => {
       model: "SP-NW01",
       material: "100% Polyester Needle Punch",
       colors: "White / Black / Grey",
+      image: diffStyleImg,
     },
     {
       name: "Shoulder Pad with Tricot Fabric",
@@ -70,6 +88,7 @@ const Products = () => {
       model: "J01-0050",
       material: "100% Polyester Needle Punch & Fabric",
       colors: "White / Black / Grey",
+      image: tricotImg,
     },
     {
       name: "Shoulder Pad with Non-Woven Fabric",
@@ -78,6 +97,7 @@ const Products = () => {
       model: "J01-0051",
       material: "100% Polyester Needle Punch & Non-Woven Fabric",
       colors: "White / Black / Grey",
+      image: nonWovenImg,
     },
     {
       name: "Sleeve Roll for Overcoats & Jackets",
@@ -86,6 +106,7 @@ const Products = () => {
       model: "SR-0010",
       material: "100% Polyester",
       colors: "White / Black / Grey",
+      image: sleeveRollImg,
     },
   ];
 
@@ -127,9 +148,9 @@ const Products = () => {
               {products.map((product, index) => (
                 <div key={index} className="product-card">
                   <div className="product-content">
-                    {/* Product Image Placeholder */}
+                    {/* Product Image */}
                     <div className="product-image">
-                      <div className="product-icon"><FaTag /></div>
+                      <img src={product.image} alt={product.name} className="product-img" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
                     </div>
 
                     {/* Product Details */}
