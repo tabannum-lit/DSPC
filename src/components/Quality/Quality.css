@@ -55,6 +55,17 @@
 .feature-icon {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certification-logo {
+  max-width: 120px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .feature-title {
@@ -127,12 +138,24 @@
   color: #2c3e50;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 .stat-label {
   color: #64748b;
   font-size: 0.9rem;
   font-weight: 500;
+  line-height: 1.4;
+}
+
+.promise-stat:nth-child(2) .stat-number {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.promise-stat:nth-child(2) .stat-label {
+  font-size: 0.85rem;
+  line-height: 1.3;
 }
 
 /* Responsive Design */
@@ -169,6 +192,14 @@
 
   .stat-number {
     font-size: 1.8rem;
+  }
+
+  .promise-stat:nth-child(2) .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .promise-stat:nth-child(2) .stat-label {
+    font-size: 0.8rem;
   }
 }
 

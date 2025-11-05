@@ -1,6 +1,8 @@
 import React from "react";
 import "./Quality.css";
-import { FaAward, FaLeaf, FaMicroscope } from "react-icons/fa";
+import { FaLeaf } from "react-icons/fa";
+import intertekLogo from "../../logos/intertek_logo.png";
+import gtilLogo from "../../logos/GTIL_logo.jfif";
 
 const Quality = () => {
   return (
@@ -15,15 +17,23 @@ const Quality = () => {
 
         <div className="quality-features">
           <div className="quality-feature">
-            <div className="feature-icon"><FaAward /></div>
-            <h3 className="feature-title">ISO 9001:2015 Certified</h3>
+            <div className="feature-icon">
+              <img src={gtilLogo} alt="GTIL Logo" className="certification-logo" />
+            </div>
+            <h3 className="feature-title">GTIL Certified</h3>
             <p className="feature-description">
-              Internationally recognized quality management system ensuring
-              consistent product excellence and customer satisfaction across all
-              operations.
+              GTIL-verified manufacturing system ensuring globally compliant production processes, consistent quality control, and reliable supply standards across all operations.
             </p>
           </div>
-
+          <div className="quality-feature">
+            <div className="feature-icon">
+              <img src={intertekLogo} alt="Intertek Logo" className="certification-logo" />
+            </div>
+            <h3 className="feature-title">Intertek TQP Certified</h3>
+            <p className="feature-description">
+              Certified under Intertek's Trim Supplier Qualification Program (TQP), confirming excellence in management environment, risk control, process discipline, product testing, and ongoing monitoring to meet international quality and reliability benchmarks.
+            </p>
+          </div>
           <div className="quality-feature">
             <div className="feature-icon"><FaLeaf /></div>
             <h3 className="feature-title">Sustainable Manufacturing</h3>
@@ -33,15 +43,6 @@ const Quality = () => {
               processes.
             </p>
           </div>
-
-          <div className="quality-feature">
-            <div className="feature-icon"><FaMicroscope /></div>
-            <h3 className="feature-title">Quality Assurance</h3>
-            <p className="feature-description">
-              Rigorous testing protocols and continuous quality monitoring
-              ensure every shoulder pad meets the highest industry standards.
-            </p>
-          </div>
         </div>
 
         <div className="quality-promise">
@@ -49,14 +50,10 @@ const Quality = () => {
             <div className="promise-text">
               <h3 className="promise-title">Our Quality Promise</h3>
               <p className="promise-description">
-                At Dot Shoulder Pad Company, quality isn't just a standard—it's
-                our foundation. Every product undergoes meticulous inspection
-                and testing to ensure it meets our exacting standards.
+                At Dot Shoulder Pad Company, quality is the foundation of every product we make. Every shoulder pad undergoes total quality inspection, rigorously certified by Intertek under the Trim Supplier Qualification Program (TQP), ensuring compliance with international standards of reliability, durability, and precision.
               </p>
               <p className="promise-description">
-                From raw material selection to final packaging, we maintain
-                strict quality control measures that guarantee consistent
-                excellence in every shoulder pad we produce.
+                From carefully selected raw materials to precision production and final packaging, each step is monitored to guarantee flawless products. Our zero-defect tolerance and continuous quality monitoring ensure every shoulder pad meets our exacting standards.
               </p>
             </div>
             <div className="promise-stats">
@@ -65,8 +62,8 @@ const Quality = () => {
                 <div className="stat-label">Quality Inspected</div>
               </div>
               <div className="promise-stat">
-                <div className="stat-number">ISO</div>
-                <div className="stat-label">Certified</div>
+                <div className="stat-number">Intertek TQP</div>
+                <div className="stat-label">Certified – Facility & Production</div>
               </div>
               <div className="promise-stat">
                 <div className="stat-number">0</div>

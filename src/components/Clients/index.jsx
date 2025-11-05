@@ -1,6 +1,8 @@
 import React from "react";
 import "./Clients.css";
-import { FaCertificate, FaHandshake, FaUsers, FaIndustry } from "react-icons/fa";
+import { FaHandshake, FaUsers, FaIndustry } from "react-icons/fa";
+import intertekLogo from "../../logos/intertek_logo.png";
+import gtilLogo from "../../logos/GTIL_logo.jfif";
 
 const Clients = () => {
   return (
@@ -18,8 +20,7 @@ const Clients = () => {
           {/* Intertek Certification */}
           <div className="quality-card certification-card">
             <div className="card-badge">
-              <FaCertificate className="badge-icon" />
-              <span className="badge-text">Intertek</span>
+              <img src={intertekLogo} alt="Intertek Logo" className="certification-logo" />
             </div>
             <h3 className="card-title">Intertek Certification</h3>
             <p className="card-subtitle">Trim Supplier Qualification Program (TQP)</p>
@@ -39,8 +40,7 @@ const Clients = () => {
           {/* GTIL Certification */}
           <div className="quality-card certification-card">
             <div className="card-badge">
-              <FaCertificate className="badge-icon" />
-              <span className="badge-text">GTIL</span>
+              <img src={gtilLogo} alt="GTIL Logo" className="certification-logo" />
             </div>
             <h3 className="card-title">GTIL Certification</h3>
             <p className="card-description">

@@ -85,6 +85,14 @@
   margin-bottom: 0.5rem;
 }
 
+.certification-logo {
+  max-width: 150px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 .badge-text {
   font-size: 1rem;
   font-weight: 600;
