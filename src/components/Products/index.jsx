@@ -150,7 +150,7 @@ const Products = () => {
                   <div className="product-content">
                     {/* Product Image */}
                     <div className="product-image">
-                      <img src={product.image} alt={product.name} className="product-img" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+                      <img src={product.image} alt={product.name} className="product-img" />
                     </div>
 
                     {/* Product Details */}
