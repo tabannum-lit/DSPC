@@ -20,7 +20,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-content">
-          {/* Contact Form */}
+          {/* Contact Form with Map */}
           <div className="contact-form-section">
             <h3 className="form-title">Send us a Message</h3>
             <form onSubmit={handleContactSubmit} className="contact-form">
@@ -40,43 +40,8 @@ const Contact = () => {
                 Send Message
               </button>
             </form>
-          </div>
 
-          {/* Contact Information */}
-          <div className="contact-info-section">
-            <div className="contact-info-card">
-              <h3 className="info-title">Get in Touch</h3>
-              <div className="info-item">
-                <strong className="info-label"><FaMapMarkerAlt /> Address:</strong>
-                <p className="info-text">
-                  207/3 Mirhazirbag
-                  <br />
-                  Dhaka - 1204
-                  <br />
-                  Bangladesh
-                </p>
-              </div>
-              <div className="info-item">
-                <strong className="info-label"><FaPhone /> Phone:</strong>
-                <p className="info-text">+880 1712236938 (Bangladesh)</p>
-              </div>
-              <div className="info-item">
-                <strong className="info-label"><FaEnvelope /> Email:</strong>
-                <p className="info-text">zamirahmed@dotshoulderpad.com</p>
-              </div>
-              <div className="info-item">
-                <strong className="info-label"><FaClock /> Business Hours:</strong>
-                <p className="info-text">
-                  Monday - Friday: 8:00 AM - 6:00 PM
-                  <br />
-                  Saturday: 9:00 AM - 2:00 PM
-                  <br />
-                  Sunday: Closed
-                </p>
-              </div>
-            </div>
-
-            {/* Additional Contact Information */}
+            {/* Location Map */}
             <div className="map-section">
               <h3 className="map-title">Our Location</h3>
               <div className="map-container">
@@ -99,6 +64,45 @@ const Contact = () => {
                 Visit our manufacturing facility in the heart of Dhaka,
                 Bangladesh
               </p>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="contact-info-section">
+            <div className="contact-info-card">
+              <h3 className="info-title">Get in Touch</h3>
+              <div className="info-item">
+                <strong className="info-label"><FaMapMarkerAlt /> Address:</strong>
+                <p className="info-text">
+                  Dhaka Jatrabari Ganderia Mirhajirbag 207/3
+                  <br />
+                  Bangladesh
+                </p>
+              </div>
+              <div className="info-item">
+                <strong className="info-label"><FaPhone /> Phone:</strong>
+                <p className="info-text">
+                  +880 1712236938 (Bangladesh)
+                  <br />
+                  +17099866866(Canada)
+                </p>
+              </div>
+              <div className="info-item">
+                <strong className="info-label"><FaEnvelope /> Email:</strong>
+                <p className="info-text">
+                  zamirahmed@dotshoulderpad.com
+                  <br />
+                  ttabannum@dotshoulderpad.com
+                </p>
+              </div>
+              <div className="info-item">
+                <strong className="info-label"><FaClock /> Business Hours:</strong>
+                <p className="info-text">
+                  Saturday - Thursday: 6:00 AM - 8:00 PM
+                  <br />
+                  Friday: Closed
+                </p>
+              </div>
             </div>
           </div>
         </div>

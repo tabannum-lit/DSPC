@@ -19,8 +19,10 @@ export default function Footer() {
         <div>
           <h4>Contact Information</h4>
           <p>207/3 Mirhazirbag, Dhaka - 1204, Bangladesh</p>
-          <p>+880 1712236938</p>
+          <p>+880 1712236938 (Bangladesh)</p>
           <p>zamirahmed@dotshoulderpad.com</p>
+          <p>+17099866866 (Canada)</p>
+          <p>ttabannum@dotshoulderpad.com</p>
         </div>
 
         <div>
