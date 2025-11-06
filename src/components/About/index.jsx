@@ -19,7 +19,7 @@ const About = () => {
               Founded in 2012 with a simple vision: to revolutionize shoulder
               pad manufacturing through precision engineering and unwavering
               quality standards. What began as a small operation has grown into
-              a global powerhouse, producing 50,000 premium shoulder pads daily.
+              a global powerhouse, producing 20,000 premium shoulder pads daily.
             </p>
             <p className="about-description">
               Today, we serve national and international clients across diverse
@@ -31,11 +31,11 @@ const About = () => {
 
           <div className="about-stats">
             <div className="stat-card">
-              <div className="stat-number">12+</div>
+              <div className="stat-number">15+</div>
               <div className="stat-label">Years of Excellence</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">50K</div>
+              <div className="stat-number">20K</div>
               <div className="stat-label">Daily Production</div>
             </div>
             <div className="stat-card">
