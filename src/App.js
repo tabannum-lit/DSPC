@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import MissionVisionValues from "./components/MissionVisionValues";
 import Products from "./components/Products";
-
+import Industries from "./components/Industries";
 import Quality from "./components/Quality";
-
+import Clients from "./components/Clients";
 import IndustriesClients from "./components/IndustriesClients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
 import "./App.css";
 
 function App() {
@@ -63,8 +65,9 @@ function App() {
               </>
             }
           />
-
           <Route path="/products" element={<Products />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/industries-clients" element={<IndustriesClients />} />
         </Routes>
       </div>
