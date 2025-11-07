@@ -4,28 +4,28 @@ import "./MissionVisionValues.css";
 const MissionVisionValues = () => {
   const coreValues = [
     {
-      title: "Quality Excellence",
-      desc: "Uncompromising standards in every product",
+      title: "Quality & Precision",
+      desc: "Strict quality control and consistent product performance.",
     },
     {
-      title: "Client Trust",
-      desc: "Building lasting partnerships through reliability",
+      title: "Customer Commitment",
+      desc: "Responsive support, timely delivery, and dependable service.",
     },
     {
-      title: "Sustainability",
-      desc: "Responsible manufacturing for future generations",
+      title: "Sustainable Growth",
+      desc: "Responsible sourcing and efficient resource management.",
     },
     {
-      title: "Innovation",
-      desc: "Continuous improvement and technological advancement",
+      title: "Innovation & Improvement",
+      desc: "Continuous development in product design and manufacturing.",
     },
     {
-      title: "Global Reach",
-      desc: "Serving clients worldwide with local expertise",
+      title: "Global Service",
+      desc: "Reliable supply solutions for international garment industries.",
     },
     {
-      title: "Integrity",
-      desc: "Transparent operations and ethical business practices",
+      title: "Integrity & Transparency",
+      desc: "Ethical operations and trusted long-term partnerships.",
     },
   ];
 
@@ -34,7 +34,7 @@ const MissionVisionValues = () => {
       <div className="mission-container">
         <div className="mission-header">
           <h2 className="mission-title">Mission, Vision & Values</h2>
-          <p className="mission-subtitle">The Foundation of Our Success</p>
+          <p className="mission-subtitle">The Principles That Guide Our Work</p>
         </div>
 
         <div className="mission-content">
@@ -42,19 +42,18 @@ const MissionVisionValues = () => {
             <div className="mission-card">
               <h3 className="card-title">Our Mission</h3>
               <p className="card-description">
-                To deliver premium shoulder pad solutions that exceed
-                expectations, combining cutting-edge manufacturing technology
-                with uncompromising quality standards to serve our global
-                clientele.
+              To deliver premium shoulder pad solutions that exceed expectations, combining 
+              cutting-edge manufacturing technology with uncompromising quality standards 
+              to serve our global clientele.
               </p>
             </div>
 
             <div className="mission-card">
               <h3 className="card-title">Our Vision</h3>
               <p className="card-description">
-                To be the world's leading shoulder pad manufacturer, recognized
-                for innovation, reliability, and sustainable practices that set
-                industry standards for excellence.
+                To be recognized as a trusted global leader in shoulder pad
+                manufacturing, known for innovation, operational excellence, and
+                long-term partnerships with garment manufacturers worldwide.
               </p>
             </div>
           </div>

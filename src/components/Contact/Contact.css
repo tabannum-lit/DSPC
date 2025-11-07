@@ -30,24 +30,41 @@
   line-height: 1.6;
 }
 
-.contact-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 3rem;
-  align-items: start;
+/* =============================== */
+/* Top Two Cards: Form + Info */
+/* =============================== */
+.top-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-/* Contact Form */
-.contact-form-section {
+.contact-form-section,
+.contact-info-card {
+  flex: 1;
+  min-width: 400px;
   background-color: #f8fafc;
-  padding: 2rem;
   border-radius: 12px;
+  padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
 }
 
+.contact-form-section:hover,
+.contact-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================== */
+/* Contact Form */
+/* =============================== */
 .form-title {
   color: #1e3a8a;
   margin-bottom: 1.5rem;
@@ -112,24 +129,9 @@
   background-color: #1e40af;
 }
 
-/* Contact Information */
-.contact-info-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100%;
-}
-
-.contact-info-card {
-  background-color: #f8fafc;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
+/* =============================== */
+/* Contact Info Card */
+/* =============================== */
 .info-title {
   color: #1e3a8a;
   margin-bottom: 1.5rem;
@@ -154,12 +156,14 @@
   font-size: 0.95rem;
 }
 
-/* Map Section */
-.map-section {
-  margin-top: 2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+/* =============================== */
+/* Map Card (Separate Below) */
+/* =============================== */
+.map-card {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .map-title {
@@ -167,13 +171,22 @@
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .map-container {
   width: 100%;
-  margin-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .map-description {
@@ -184,23 +197,25 @@
   text-align: center;
 }
 
+/* =============================== */
 /* Responsive Design */
+/* =============================== */
+@media (max-width: 900px) {
+  .top-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form-section,
+  .contact-info-card {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 3rem 1rem;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .contact-form-section {
-    padding: 1.5rem;
-  }
-
-  .contact-info-card {
-    padding: 1.5rem;
   }
 
   .form-input,
@@ -211,10 +226,6 @@
   .form-submit-btn {
     font-size: 0.9rem;
     padding: 0.8rem 1.5rem;
-  }
-
-  .map-section {
-    padding: 1.5rem;
   }
 
   .map-container iframe {
@@ -235,14 +246,6 @@
     font-size: 1rem;
   }
 
-  .contact-form-section {
-    padding: 1rem;
-  }
-
-  .contact-info-card {
-    padding: 1rem;
-  }
-
   .form-input,
   .form-textarea {
     padding: 0.6rem;
@@ -250,10 +253,6 @@
 
   .form-submit-btn {
     padding: 0.7rem 1rem;
-  }
-
-  .map-section {
-    padding: 1rem;
   }
 
   .map-container iframe {

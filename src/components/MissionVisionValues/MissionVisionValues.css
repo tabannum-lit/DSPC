@@ -38,8 +38,10 @@
 
 .mission-vision-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* two cards side by side, aligned like values */
+  gap: 3rem;
+  max-width: 2500px; /* optional: match width to values grid */
+  margin: 0 auto;   /* centers the mission/vision cards */
 }
 
 .mission-card {
@@ -88,9 +90,10 @@
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 1rem;
 }
+
 
 .value-item {
   text-align: center;

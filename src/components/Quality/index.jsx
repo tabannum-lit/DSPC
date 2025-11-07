@@ -3,6 +3,7 @@ import "./Quality.css";
 import { FaLeaf } from "react-icons/fa";
 import intertekLogo from "../../logos/intertek_logo.png";
 import gtilLogo from "../../logos/GTIL_logo.jfif";
+import sustainableLogo from "../../logos/gear.jfif";
 
 const Quality = () => {
   return (
@@ -35,12 +36,12 @@ const Quality = () => {
             </p>
           </div>
           <div className="quality-feature">
-            <div className="feature-icon"><FaLeaf /></div>
-            <h3 className="feature-title">Sustainable Manufacturing</h3>
+            <div className="feature-icon">
+              <img src={sustainableLogo} alt="Sustainable Logo" className="certification-logo" />
+            </div>
+            <h3 className="feature-title">Responsible Manufacturing</h3>
             <p className="feature-description">
-              Committed to environmental responsibility through sustainable
-              practices, waste reduction, and eco-friendly manufacturing
-              processes.
+            We prioritize smart material utilization, energy-efficient production, and waste-reduction practices to support a cleaner, more sustainable supply chain.
             </p>
           </div>
         </div>
