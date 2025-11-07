@@ -1,14 +1,6 @@
-/* Hero Section Styles */
+/* Hero Section Styles */ 
 .hero {
   position: relative;
-  background-image: linear-gradient(
-      rgba(44, 62, 80, 0.7),
-      rgba(52, 73, 94, 0.7)
-    ),
-    url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: white;
   padding: 8rem 2rem 4rem;
   text-align: center;
@@ -16,12 +8,72 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff; /* white background */
   animation: fadeInUp 1s ease-out;
+}
+
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* change from #000 to #fff */
+  overflow: hidden;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* adjust height automatically */
+  gap: 10px;
+}
+
+.slide-image {
+  flex: 1;
+  max-width: 33%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.85;
+  transition: opacity 0.8s ease-in-out, transform 0.3s ease;
+}
+
+.image-group.single-image .slide-image {
+  max-width: 50%; /* single images (4 & 9) fit nicely */
+  margin: 0 auto;
+}
+
+.slide-image:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.image-group.fade-in {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.image-group.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .hero-content {
   max-width: 900px;
   animation: slideInUp 1.2s ease-out 0.3s both;
+  z-index: 1;
+  position: relative;
 }
 
 .hero-title {
@@ -65,20 +117,6 @@
   box-shadow: 0 12px 35px rgba(192, 192, 192, 0.4);
 }
 
-.hero-slideshow {
-  transition: background-image 0.7s cubic-bezier(0.4,0,0.2,1);
-}
-
-.fade-slide.fade-in {
-  opacity: 1;
-  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
-}
-
-.fade-slide.fade-out {
-  opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
-}
-
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -106,7 +144,10 @@
 @media (max-width: 768px) {
   .hero {
     padding: 6rem 1rem 3rem;
-    background-attachment: scroll;
+  }
+
+  .slide-image {
+    max-width: 45%;
   }
 
   .hero-title {
@@ -142,5 +183,13 @@
   .cta-button {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  .slide-image {
+    max-width: 80px; 
+  }
+
+  .image-group {
+    gap: 5px;
   }
 }

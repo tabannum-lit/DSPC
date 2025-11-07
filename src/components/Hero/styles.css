@@ -7,7 +7,7 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  overflow: visible;
+  overflow: hidden; /* changed from visible to hide overflow */
 }
 
 .ds-hero-image-wrapper {
@@ -16,43 +16,73 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -1; /* keep text on top */
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: visible;
-  background-color: #ffffff;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff; /* changed from black to white */
+  padding: 2rem; /* optional spacing from edges */
+  box-sizing: border-box;
+}
+
+
+.image-group {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* align images near bottom */
+  gap: 10px;              /* space between images */
+  width: 100%;
+  max-width: 1200px;      /* prevent stretching too wide */
+  height: auto;           /* adjust height automatically */
 }
 
 .ds-hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
-  display: block;
-  opacity: 0.85;
-  will-change: opacity;
+  width: 100%;               /* fills its box */
+  height: 400px;             /* consistent height for all */
+  object-fit: cover;         /* fills box while keeping proportions */
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: 0.95;
+  transition: opacity 0.8s ease-in-out;
 }
 
+/* Make single images fill more space */
+.image-group:has(img:only-child) .ds-hero-image {
+  max-width: 220%;      /* take full width */
+  height: 1000px;        /* same height for consistency */
+  object-fit: contain;  /* keep full image visible */
+  background-color: #fff;
+  padding: 10px;
+}
 .ds-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(173, 216, 230, 0.15) 0%,
-    rgba(173, 216, 230, 0.25) 100%
-  );
-  z-index: 0;
-  pointer-events: none;
+  background: rgba(173, 216, 230, 0.4); /* light blue tint only */
+  z-index: 0; /* sits above images but below text */
+}
+
+
+
+
+
+.image-group.fade-in {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.image-group.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .ds-hero-inner { 
   max-width: 900px; 
   position: relative;
-  z-index: 1;
+  z-index: 1; /* keeps content above images */
 }
 
 .ds-hero-title { 
@@ -92,18 +122,7 @@
   background: white; 
   transform: translateY(-3px); 
   box-shadow: 0 12px 35px rgba(192,192,192,.4); 
-}
-
-.hero-slideshow .ds-hero-image {
-  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
-}
-
-.ds-hero-image.fade-in {
-  opacity: 0.85;
-}
-
-.ds-hero-image.fade-out {
-  opacity: 0;
+  
 }
 
 /* Responsive Design */
@@ -126,6 +145,10 @@
     padding: 1rem 2rem;
     font-size: 1rem;
   }
+
+  .ds-hero-image {
+    max-width: 30%; /* shrink images a bit on smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
@@ -145,5 +168,13 @@
   .ds-hero-cta {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  .ds-hero-image {
+    max-width: 80px; /* make images smaller on mobile */
+  }
+
+  .image-group {
+    gap: 5px;
   }
 }

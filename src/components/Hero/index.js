@@ -2,14 +2,50 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 export default function Hero({ scrollToSection }) {
-  // Array of 5 slideshow images (replace these URLs with your chosen images)
+  // Import 15 local images
   const images = [
-    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80", // Factory 1
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2070&q=80", // Factory 2
-    "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=2070&q=80", // Factory 3
-    "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=2070&q=80", // Production
-    "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=2070&q=80"  // Workers
+    require('../../animation picture/1.jfif'),
+    require('../../animation picture/2.jpeg'),
+    require('../../animation picture/3.jpg'),
+    require('../../animation picture/4.png'),  // alone
+    require('../../animation picture/5.jpg'),
+    require('../../animation picture/6.jpg'),
+    require('../../animation picture/7.jpg'),
+    require('../../animation picture/8.jpeg'),
+    require('../../animation picture/9.png'),  // alone
+    require('../../animation picture/10.jpeg'),
+    require('../../animation picture/11.jpg'),
+    require('../../animation picture/12.jpg'),
+    require('../../animation picture/13.jpeg'),
+    require('../../animation picture/14.jpg'),
+    require('../../animation picture/15.jpeg')
   ];
+
+  // Custom grouping: 4 and 9 alone, rest in sets of 3
+  const groupedImages = [];
+  let tempGroup = [];
+
+  images.forEach((img, idx) => {
+    if (idx === 3 || idx === 8) { // index 3 = 4th image, index 8 = 9th image
+      if (tempGroup.length) {
+        groupedImages.push(tempGroup);
+        tempGroup = [];
+      }
+      groupedImages.push([img]); // push 4th and 9th as single
+    } else {
+      tempGroup.push(img);
+      if (tempGroup.length === 3) {
+        groupedImages.push(tempGroup);
+        tempGroup = [];
+      }
+    }
+  });
+
+  // push remaining images if any
+  if (tempGroup.length) {
+    groupedImages.push(tempGroup);
+  }
+
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
@@ -18,27 +54,42 @@ export default function Hero({ scrollToSection }) {
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
-        setIndex((prev) => (prev + 1) % images.length);
+        setIndex((prev) => (prev + 1) % groupedImages.length);
       }, 800);
     }, 5000);
     return () => {
       clearInterval(interval);
       clearTimeout(fadeTimeout);
     };
-  }, [images.length]);
+  }, [groupedImages.length]);
 
   return (
-    <section
-      id="home"
-      className="ds-hero hero-slideshow"
-      style={{
-        backgroundImage: `linear-gradient(rgba(44,62,80,0.7),rgba(52,73,94,0.7)), url(${images[index]})`
-      }}
-    >
-      <div className={"ds-hero-inner fade-slide" + (fade ? " fade-out" : " fade-in") }>
+    <section id="home" className="ds-hero hero-slideshow">
+      <div className="ds-hero-image-wrapper">
+        <div className={`image-group ${fade ? "fade-out" : "fade-in"}`}>
+          {groupedImages[index].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Slide ${index * 3 + i + 1}`}
+              className="ds-hero-image"
+            />
+          ))}
+        </div>
+        <div className="ds-hero-overlay"></div>
+      </div>
+
+      <div className="ds-hero-inner">
         <h1 className="ds-hero-title">Excellence in Shoulder Pads</h1>
-        <p className="ds-hero-sub">Premium Quality • Crafted with Precision • Trusted Since 2012</p>
-        <button className="ds-hero-cta" onClick={() => scrollToSection('products')}>Explore Products</button>
+        <p className="ds-hero-sub">
+          Premium Quality • Crafted with Precision • Trusted Since 2012
+        </p>
+        <button
+          className="ds-hero-cta"
+          onClick={() => scrollToSection('products')}
+        >
+          Explore Products
+        </button>
       </div>
     </section>
   );
