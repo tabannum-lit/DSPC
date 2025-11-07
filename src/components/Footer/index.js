@@ -7,42 +7,34 @@ export default function Footer() {
   return (
     <footer className="ds-footer">
       <div className="ds-footer-grid">
-        
-        {/* Company Info */}
         <div>
-          <div className="ds-footer-brand" style={{ display: 'flex', alignItems: 'left', gap: '1rem' }}>
-            <img src={logo} alt="Dot Shoulder Pad Company Logo" />
-            <h3 style={{ margin: 0 }}>Dot Shoulder Pad Company</h3>
+          <div className="ds-footer-brand">
+            <img src={logo} alt="logo" />
+            <h3>Dot Shoulder Pad Company</h3>
           </div>
           <p className="ds-tag">Premium Shoulder Pads Since 2012</p>
           <p>Your trusted partner in manufacturing excellence. Delivering quality products and exceptional service worldwide.</p>
         </div>
 
-        {/* Contact Info */}
         <div>
           <h4>Contact Information</h4>
-          <p><strong>Bangladesh Office:</strong></p>
-          <p>207/3 Mirhazirbag, Dhaka - 1204</p>
-          <p>Phone: +880 1712236938</p>
-          <p>Email: zamirahmed@dotshoulderpad.com</p>
+          <p>207/3 Mirhazirbag, Dhaka - 1204, Bangladesh</p>
+          <p>+880 1712236938 (Bangladesh)</p>
+          <p>zamirahmed@dotshoulderpad.com</p>
           
         </div>
 
-        {/* Quick Links */}
         <div>
           <h4>Quick Links</h4>
           <div className="quick-links">
-            {['Home','About Us','Products','Services','Contact Us'].map(link => (
-              <a key={link} href="#">{link}</a>
-            ))}
+            {['Home','About Us','Products','Services','Contact Us'].map(l => <a key={l} href="#">{l}</a>)}
           </div>
         </div>
 
-        {/* Newsletter */}
         <div>
+          
           <div className="newsletter">
-            <h5>Subscribe for Updates</h5>
-            <p>Get notified about our latest products and offers.</p>
+            <h5>Subscribe for updates on new products</h5>
             <div className="newsletter-form">
               <input type="email" placeholder="Your email" />
               <button>Subscribe</button>
@@ -51,7 +43,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Legal Section */}
       <div className="ds-legal">
         <div className="legal-links">
           <a href="#">Terms &amp; Conditions</a>
@@ -62,4 +53,3 @@ export default function Footer() {
     </footer>
   );
 }
-

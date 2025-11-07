@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import photoCollage2 from '../../animation picture/photo-collage2.png.png';
-import photoCollage from '../../animation picture/photo-collage.png.png';
-import factory1 from '../../animation picture/factory1.jpeg';
-import picture22 from '../../animation picture/Picture22.jpg';
-import picture11 from '../../animation picture/Picture11.jpg';
 
 export default function Hero({ scrollToSection }) {
-  // Array of 5 slideshow images using local images
+  // Array of 5 slideshow images (replace these URLs with your chosen images)
   const images = [
-    photoCollage2,
-    photoCollage,
-    factory1,
-    picture22,
-    picture11
+    "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80", // Factory 1
+    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2070&q=80", // Factory 2
+    "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=2070&q=80", // Factory 3
+    "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=2070&q=80", // Production
+    "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=2070&q=80"  // Workers
   ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);
@@ -36,15 +31,10 @@ export default function Hero({ scrollToSection }) {
     <section
       id="home"
       className="ds-hero hero-slideshow"
+      style={{
+        backgroundImage: `linear-gradient(rgba(44,62,80,0.7),rgba(52,73,94,0.7)), url(${images[index]})`
+      }}
     >
-      <div className="ds-hero-image-wrapper">
-        <img 
-          src={images[index]} 
-          alt="Hero slideshow"
-          className={`ds-hero-image ${fade ? 'fade-out' : 'fade-in'}`}
-        />
-        <div className="ds-hero-overlay"></div>
-      </div>
       <div className={"ds-hero-inner fade-slide" + (fade ? " fade-out" : " fade-in") }>
         <h1 className="ds-hero-title">Excellence in Shoulder Pads</h1>
         <p className="ds-hero-sub">Premium Quality • Crafted with Precision • Trusted Since 2012</p>
